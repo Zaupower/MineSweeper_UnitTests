@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K76dErM46UKXs0uk89SUlxFS5Vb0eCsYq/ceR37V3LkA4m6Qw2Pjo0OJq4XR0bUmGRVpOWForD6DzXq1p3Stow==",
+  "dgSpecHash": "TeUv8Pw0fSec7PzDNeNs4Edije05KKhKpRPWZ7lBsA7Esk9cneJiXo8G2X0tEFryvmvlnevmYVd/noldcziFxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj",
+  "projectFilePath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

@@ -3903,11 +3903,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Console\\Minesweeper.Console.csproj",
-      "projectName": "Minesweeper.Console",
-      "projectPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Console\\Minesweeper.Console.csproj",
+      "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\Tests.csproj",
+      "projectName": "Tests",
+      "projectPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\Tests.csproj",
       "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Console\\obj\\",
+      "outputPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",

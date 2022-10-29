@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Console\\Minesweeper.Console.csproj": {}
+    "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Console\\Minesweeper.Console.csproj": {
+    "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Console\\Minesweeper.Console.csproj",
-        "projectName": "Minesweeper.Console",
-        "projectPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Console\\Minesweeper.Console.csproj",
+        "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj",
+        "projectName": "Minesweeper.Core",
+        "projectPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj",
         "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Console\\obj\\",
+        "outputPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,11 +27,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj": {
-                "projectPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -77,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj": {
+    "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj",
-        "projectName": "Minesweeper.Core",
-        "projectPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj",
+        "projectUniqueName": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\Tests.csproj",
+        "projectName": "Tests",
+        "projectPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\obj\\",
+        "outputPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -100,7 +96,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj": {
+                "projectPath": "C:\\Users\\marce\\OneDrive\\Documents\\QABootcamp\\Lecture5\\Task5\\MineSweeper_UnitTests\\Minesweeper\\Minesweeper.Core\\Minesweeper.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
