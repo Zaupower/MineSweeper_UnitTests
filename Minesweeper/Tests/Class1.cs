@@ -32,8 +32,8 @@ namespace Tests
         //if (GameState != GameState.Active) throw exception
         //if (targetCell.IsOpen) return GameState obj type;
         //if (targetCell.IsMine) GameState = GameState.Lose;
-        //targetCell.MineNeighborsCount need to have the same value as the number of mines in the neighborhood
-
+        //targetCell.MineNeighborsCount need to have the same value as the number of mines in the neighborhood, deixar para ultimo
+        //if (openCount + mineCount == totalCount) GameState = GameState.Win;
         [Test]
 
     }

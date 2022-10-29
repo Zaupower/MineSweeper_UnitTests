@@ -47,7 +47,11 @@ namespace Minesweeper.Core
             }
             else
             {
-                for (var row = Math.Max(0, y - 1); row <= Math.Min(_field.GetLength(0) - 1, y + 1); row++)
+                var fieldLength = _field.GetLength(0) - 1;
+                var minRow = Math.Min(fieldLength, y + 1);
+                var maxRow = Math.Max(0, y - 1);
+
+                for (var row = maxRow; row <= minRow; row++)
                 {
                     for (var column = Math.Max(0, x - 1); column <= Math.Min(_field.GetLength(1) - 1, x + 1); column++)
                     {
