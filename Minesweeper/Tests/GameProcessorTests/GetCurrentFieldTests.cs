@@ -20,7 +20,7 @@ namespace Tests.GameProcessor
 
 
         //Verify if all publicFieldInfo.
-        //Missing test all field is equaly returned (_field[x,y] == _currentField[x,y]
+        
         [Test]
         public void GetCurrentField_GameProcessorObject_Equal([Values(0, 1, 2)] int difficultyLevel)
         {
@@ -36,43 +36,15 @@ namespace Tests.GameProcessor
 
             _currentField = _gameProcessor.GetCurrentField();
 
+            var currentFieldCell = _currentField[x, y];
+
             switch (actualGameState)
             {
                 case GameState.Active:
-                    for (int row = 0; row < _settings.Height; row++)
-                    {
-                        for (int column = 0; column < _settings.Height; column++)
-                        {
-                            var fieldCell = _field[row, column];
-                            var currentFieldCell = _currentField[row, column];
-                            if (row == x && column == y)
-                            {
-                                Assert.AreNotEqual(currentFieldCell, PointState.Mine, "Correct state of cell(not mine) opened");
-                            }
-                            //else
-                            //{
-                            //    Assert.AreEqual(currentFieldCell, fieldCell? PointState.Close : PointState.Mine, "Same state has previous");
-                            //}
-                        }
-                    }
+                    Assert.AreNotEqual(currentFieldCell, PointState.Mine, "Correct state of cell(not mine) opened");               
                     break;
                 case GameState.Lose:
-                    for (int row = 0; row < _settings.Height; row++)
-                    {
-                        for (int column = 0; column < _settings.Height; column++)
-                        {
-                            var fieldCell = _field[row, column];
-                            var currentFieldCell = _currentField[row, column];
-                            if (row == x && column == y)
-                            {
-                                Assert.AreEqual(currentFieldCell, PointState.Mine, "Correct state of cell opened, mine");
-                            }
-                            //else
-                            //{
-                            //    Assert.AreEqual(currentFieldCell, fieldCell ? PointState.Close : PointState.Mine, "Same state has previous");
-                            //}
-                        }
-                    }
+                    Assert.AreEqual(currentFieldCell, PointState.Mine, "Correct state of cell opened, mine");
                     break;
                 //case GameState.Win:
 
