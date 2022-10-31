@@ -23,8 +23,7 @@ namespace Tests.GameProcessor
         
         [Test]
         public void GetCurrentField_GameProcessorObject_Equal([Values(0, 1, 2)] int difficultyLevel)
-        {
-            GameState expectedGameState;
+        {            
             GameState actualGameState;
             int x=0, y = 0;
 
@@ -57,10 +56,8 @@ namespace Tests.GameProcessor
         [Test]
         public void GetCurrentField_RectangularField_Equal([Values(0, 1, 2)] int difficultyLevel, [Values(5, 10)] int rowLenght, [Values(10, 5)] int columnLenght)
         {
-            GameState expectedGameState;
             GameState actualGameState;
             int x = 0, y = 0;
-
 
             _settings = DifficultyManager.GetGameSettingsByDifficultylevel((DifficultyLevel)difficultyLevel);
             _field = FieldGenerator.GetRandomField(rowLenght, columnLenght, _settings.Mines);
@@ -93,9 +90,11 @@ namespace Tests.GameProcessor
 
 
         [Test]
-        public void GetCurrentField_RectangularFieldNoMines_Equal([Values(0, 1, 2)] int difficultyLevel, [Values(5, 10)] int rowLenght, [Values(10, 5)] int columnLenght, [Values(0,1,500)] int mines)
-        {
-            GameState expectedGameState;
+        public void GetCurrentField_RectangularFieldNoMines_Equal(
+            [Values(0, 1, 2)] int difficultyLevel, 
+            [Values(5, 10)] int rowLenght, 
+            [Values(10, 5)] int columnLenght)
+        {            
             GameState actualGameState;
             int x = 0, y = 0;
 
