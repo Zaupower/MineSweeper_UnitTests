@@ -20,12 +20,18 @@ Returns the GameState that can be Active, Lose or Win.
 - if (openCount + mineCount == totalCount) : GameState = GameState.Win;
 
 **GetCurrentField()**     
-Receives void
-E possible testar cada posicao ao percorrer o field bool criado com o final PointState(x,y) is mine
-Returns PointState[,] 2d matrix with the state of every cell 
-Branches: 
+Receives void       
+Returns PointState[,] 2d matrix with the state of every cell    
+Branches:        
 - if (!targetCell.IsOpen && GameState == GameState.Active) : publicFieldInfo[row, column] = PointState.Close;
 - else if (targetCell.IsMine)if (targetCell.IsMine) GameState = GameState.Lose;
 - else publicFieldInfo[row, column] = (PointState)targetCell.MineNeighborsCount;
 
+**GameProcessor Constructor**    
+Receives bool[,] boolField    
+Returns void     
+Branches:     
+- Populate Ponit[,] _field;
+- define total count as row*column
+- define mineCount = mineCount + (isMine ? 1: 0);
 
