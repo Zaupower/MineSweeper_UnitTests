@@ -7,7 +7,7 @@ The tests made for each function where designed with the branching method where 
 **Methods description**  
      
 **Open()**     
-Receives two ints, has coordinates in range of the field defined
+Receives two ints, has coordinates in range of the field defined     
 Returns the GameState that can be Active, Lose or Win.    
     
 **Branches:**     
