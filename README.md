@@ -1,7 +1,7 @@
 # MineSweeper_UnitTests   
 C# MineSweeper game UnitTests    
 
-**Methodology**
+**Methodology**     
 The tests made for each function where designed with the branching method where each branch represents a possible outcome from the method.    
 Methods description    
 **Open()**     
