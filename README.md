@@ -12,11 +12,11 @@ Returns the GameState that can be Active, Lose or Win.
     
 **Branches:**     
      
-- if (GameState != GameState.Active) throw InvalidOperationException. DONE
-- if (targetCell.IsOpen) return GameState; DONE
-- if (targetCell.IsMine) GameState = GameState.Lose; DONE
+- if (GameState != GameState.Active) throw InvalidOperationException.
+- if (targetCell.IsOpen) return GameState; 
+- if (targetCell.IsMine) GameState = GameState.Lose;
 - else from all above: run between all neighbor cells and count their neighbor mines
-  - if the current cell does not have mines as neighbors recursively open each neighbor. DONE
+  - if the current cell does not have mines as neighbors recursively open each neighbor.
 - if (openCount + mineCount == totalCount) : GameState = GameState.Win;
 
 **GetCurrentField()**     
