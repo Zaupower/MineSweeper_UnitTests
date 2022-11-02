@@ -104,7 +104,6 @@ namespace Minesweeper.Core
                         publicFieldInfo[row, column] = (PointState)targetCell.MineNeighborsCount;
                 }
             }
-
             return publicFieldInfo;
         }
     }

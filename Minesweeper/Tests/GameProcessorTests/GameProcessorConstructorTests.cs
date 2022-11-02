@@ -17,7 +17,7 @@ namespace Tests.GameProcessor
         private GameSettings? _settings;
         private bool[,]? _field;
         private Minesweeper.Core.GameProcessor? _gameProcessor;
-        private PointState[,] _currentField;
+        private PointState[,]? _currentField;
 
 
         //Beginner
@@ -46,16 +46,10 @@ namespace Tests.GameProcessor
             _currentField = _gameProcessor.GetCurrentField();
         }
 
-
-        //Falta verificar s etem o numero de minas setado 
-        //TEM DE SER NULCEAR OS TESTES
-        //Enviar matrix com x numeros de bombas e chamar GetCurrentField() e verificar o numero de bombas?
-
-        //Verify if field generated is the same size has requested
         [Test]
         public void GameProcessor_FieldSize_Equal(
-            [Values(5, 10, 15)] int rowLength,
-            [Values(15, 10, 5)] int columnLength,
+            [Values(5, 10, 15, 15)] int rowLength,
+            [Values(15, 10, 5, 15)] int columnLength,
             [Values(5, 10, 25)] int mines)
         {  
             _field = FieldGenerator.GetRandomField(rowLength, columnLength,mines);
