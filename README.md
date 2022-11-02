@@ -7,8 +7,8 @@ The tests made for each function where designed with the branching method where 
 **Methods description**  
      
 **Open()**     
-Receives two ints, has coordinates in range of the field defined     
-Returns the GameState that can be Active, Lose or Win.    
+Receives: two ints, has coordinates in range of the field defined     
+Returns: the GameState that can be Active, Lose or Win.    
     
 **Branches:**     
      
@@ -20,16 +20,16 @@ Returns the GameState that can be Active, Lose or Win.
 - if (openCount + mineCount == totalCount) : GameState = GameState.Win;
 
 **GetCurrentField()**     
-Receives void       
-Returns PointState[,] 2d matrix with the state of every cell    
+Receives: void       
+Returns: PointState[,] 2d matrix with the state of every cell    
 Branches:        
 - if (!targetCell.IsOpen && GameState == GameState.Active) : publicFieldInfo[row, column] = PointState.Close;
 - else if (targetCell.IsMine)if (targetCell.IsMine) GameState = GameState.Lose;
 - else publicFieldInfo[row, column] = (PointState)targetCell.MineNeighborsCount;
 
 **GameProcessor Constructor**    
-Receives bool[,] boolField    
-Returns void     
+Receives: bool[,] boolField    
+Returns: void     
 Branches:     
 - Populate Ponit[,] _field;
 - define total count as row*column
