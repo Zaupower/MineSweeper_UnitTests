@@ -1,13 +1,15 @@
-# MineSweeper_UnitTests
-C# MineSweeper game UnitTests 
+# MineSweeper_UnitTests   
+C# MineSweeper game UnitTests    
 
-#Methodology
+**Methodology**
 The tests made for each function where designed with the branching method where each branch represents a possible outcome from the method.    
 Methods description    
-Open()     
+**Open()**     
 Receives two ints, has coordinates in range of the field defined
-Returns the GameState that can be Active, Lose or Win.
-Branches: 
+Returns the GameState that can be Active, Lose or Win.    
+    
+**Branches:**     
+     
 - if (GameState != GameState.Active) throw InvalidOperationException. DONE
 - if (targetCell.IsOpen) return GameState; DONE
 - if (targetCell.IsMine) GameState = GameState.Lose; DONE
@@ -15,7 +17,7 @@ Branches:
   - if the current cell does not have mines as neighbors recursively open each neighbor. DONE
 - if (openCount + mineCount == totalCount) : GameState = GameState.Win;
 
-GetCurrentField()
+**GetCurrentField()**     
 Receives void
 E possible testar cada posicao ao percorrer o field bool criado com o final PointState(x,y) is mine
 Returns PointState[,] 2d matrix with the state of every cell 
