@@ -2,9 +2,9 @@
 C# MineSweeper game UnitTests 
 
 #Methodology
-The tests made for each function where designed with the branching method where each branch represents a possible outcome from the method. 
-Methods description
-Open()
+The tests made for each function where designed with the branching method where each branch represents a possible outcome from the method.    
+Methods description    
+Open()     
 Receives two ints, has coordinates in range of the field defined
 Returns the GameState that can be Active, Lose or Win.
 Branches: 
@@ -12,7 +12,7 @@ Branches:
 - if (targetCell.IsOpen) return GameState; DONE
 - if (targetCell.IsMine) GameState = GameState.Lose; DONE
 - else from all above: run between all neighbor cells and count their neighbor mines
-- if the current cell does not have mines as neighbors recursively open each neighbor. DONE
+  - if the current cell does not have mines as neighbors recursively open each neighbor. DONE
 - if (openCount + mineCount == totalCount) : GameState = GameState.Win;
 
 GetCurrentField()
