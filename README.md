@@ -2,8 +2,10 @@
 C# MineSweeper game UnitTests    
 
 **Methodology**     
-The tests made for each function where designed with the branching method where each branch represents a possible outcome from the method.    
-Methods description    
+The tests made for each function where designed with the branching method where each branch represents a possible outcome from the method.     
+     
+**Methods description**  
+     
 **Open()**     
 Receives two ints, has coordinates in range of the field defined
 Returns the GameState that can be Active, Lose or Win.    
