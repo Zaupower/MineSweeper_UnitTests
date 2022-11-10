@@ -39,6 +39,6 @@ Branches:
 Intall nugget packages:     		
 - NUnit     		
 - NUnit3TestAdapter		
-- Microsoft.NET.Test.Sdk		
+- Microsoft.NET.Test.Sdk     		
 
 
