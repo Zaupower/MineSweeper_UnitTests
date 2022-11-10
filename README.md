@@ -35,10 +35,10 @@ Branches:
 - define total count as row*column
 - define mineCount = mineCount + (isMine ? 1: 0);
 
-**Setup VS for unit tests with Nunit**			
-Intall nugget packages:			
--NUnit		
--NUnit3TestAdapter		
--Microsoft.NET.Test.Sdk		
+**Setup VS for unit tests with Nunit**     		
+Intall nugget packages:     		
+- NUnit     		
+- NUnit3TestAdapter		
+- Microsoft.NET.Test.Sdk		
 
 
