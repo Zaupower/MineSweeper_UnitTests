@@ -18,15 +18,11 @@ namespace Tests.GameProcessor
         private Minesweeper.Core.GameProcessor? _gameProcessor;
         private PointState[,]? _currentField;
 
-
-        //Verify if all publicFieldInfo.
-        
         [Test]
         public void GetCurrentField_GameProcessorObject_Equal([Values(0, 1, 2)] int difficultyLevel)
         {            
             GameState actualGameState;
             int x=0, y = 0;
-
 
             _settings = DifficultyManager.GetGameSettingsByDifficultylevel((DifficultyLevel)difficultyLevel);
             _field = FieldGenerator.GetRandomField(_settings.Height, _settings.Width, _settings.Mines);
@@ -45,9 +41,6 @@ namespace Tests.GameProcessor
                 case GameState.Lose:
                     Assert.AreEqual(currentFieldCell, PointState.Mine, "Correct state of cell opened, mine");
                     break;
-                //case GameState.Win:
-
-                  //  break;
             }
             
             

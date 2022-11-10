@@ -24,7 +24,6 @@ namespace Tests.GameProcessor
         [SetUp]
         public void SetUp()
         {
-            //Setup before every test
             _settings = DifficultyManager.GetGameSettingsByDifficultylevel(DifficultyLevel.Beginner);
 
             _field = FieldGenerator.GetRandomField(_settings.Height, _settings.Width, _settings.Mines);
