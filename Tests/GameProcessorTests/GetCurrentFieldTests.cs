@@ -70,7 +70,7 @@ namespace Tests.GameProcessor
         [Test]//Verify if all cells are closed
         [TestCase(6, 6)]
         [TestCase(6, 7)]
-        public void GetCurrentField_GameProcessorObject_Equal(int rowLenght, int columnLenght)
+        public void GetCurrentField_AllCellsAreClosed_BeforeOpen(int rowLenght, int columnLenght)
         {            
             GameState actualGameState;
 
@@ -110,10 +110,11 @@ namespace Tests.GameProcessor
                 _gameProcessor.Open(cell.Item2, cell.Item1);
                 currentPointState = currentPointState.Previous();
 
-                Assert.AreEqual(currentPointState, cell.Item3, $"Correct state of cell close{cell.Item2}, ,{cell.Item1}");
+                Assert.AreEqual(currentPointState, cell.Item3, $"Correct state of cell {cell.Item2}, {cell.Item1}");
             }
         }
         
+        //Falta verificar se a celula aberta e mina
         [Test]
         public void GetCurrentField_RectangularField_Equal([Values(0, 1, 2)] int difficultyLevel, [Values(5, 10)] int rowLenght, [Values(10, 5)] int columnLenght)
         {
