@@ -13,8 +13,6 @@ namespace Tests.GameProcessor
     [TestFixture]
     internal class GameProcessorConstructorTests
     {
-
-        private GameSettings? _settings;
         private bool[,]? _field;
         private Minesweeper.Core.GameProcessor? _gameProcessor;
         private PointState[,]? _currentField;
@@ -24,25 +22,11 @@ namespace Tests.GameProcessor
         [SetUp]
         public void SetUp()
         {
-            _settings = DifficultyManager.GetGameSettingsByDifficultylevel(DifficultyLevel.Beginner);
-
-            _field = FieldGenerator.GetRandomField(_settings.Height, _settings.Width, _settings.Mines);
-
-            _gameProcessor = new Minesweeper.Core.GameProcessor(_field);
-
-            _currentField = _gameProcessor.GetCurrentField();
         }
 
         [TearDown]
         public void Postcondition()
         {
-            _settings = DifficultyManager.GetGameSettingsByDifficultylevel(DifficultyLevel.Beginner);
-
-            _field = FieldGenerator.GetRandomField(_settings.Height, _settings.Width, _settings.Mines);
-
-            _gameProcessor = new Minesweeper.Core.GameProcessor(_field);
-
-            _currentField = _gameProcessor.GetCurrentField();
         }
 
         [Test]
