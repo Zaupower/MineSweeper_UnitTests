@@ -100,7 +100,7 @@ namespace Tests.GameProcessor
         [Test]//Verify if all cells are closed
         [TestCase(6, 6)]
         [TestCase(6, 7)]
-        public void GetCurrentField_AllCellsAreClosed_BeforeOpen(int rowLenght, int columnLenght)
+        public void GetCurrentField_AllCellsAreClosed_BeforeFirstOpen(int rowLenght, int columnLenght)
         {
             _field = genCostumField.generateField(rowLenght, columnLenght, minesIndexs);
             _gameProcessor = new Minesweeper.Core.GameProcessor(_field);
@@ -150,7 +150,7 @@ namespace Tests.GameProcessor
         [TestCase(7, 6, true)]
         [TestCase(6, 6, true)]
         [TestCase(7, 6, false)]
-        public void GetCurrentField_NumberOfMines_AfterWinAndLose(int rowLenght, int columnLenght, bool lose)
+        public void GetCurrentField_IndexOfMines_AfterWinAndLose(int rowLenght, int columnLenght, bool lose)
         {
             //Precondition
             _field = genCostumField.generateField(rowLenght, columnLenght, minesIndexs);
@@ -164,7 +164,7 @@ namespace Tests.GameProcessor
                 {
                     _gameProcessor.Open(cell.Item2, cell.Item1);
 
-                }catch(InvalidOperationException)
+                }catch(InvalidOperationException)//Pevent fail by open cells affter win/lose
                 {
                     Console.WriteLine(cell.Item2 + ", " + cell.Item1);
                 }
