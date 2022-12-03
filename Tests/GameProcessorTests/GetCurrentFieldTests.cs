@@ -35,8 +35,10 @@ namespace Tests.GameProcessor
 
                 Tuple.Create(1,1),
                 Tuple.Create(1,3),
+
                 Tuple.Create(2,0),
                 Tuple.Create(2,1),
+                Tuple.Create(2,2),
                 Tuple.Create(2,3),
                 Tuple.Create(2,4),
                 Tuple.Create(2,5),
@@ -93,6 +95,32 @@ namespace Tests.GameProcessor
         [TestCase(6, 7)]
         public void GetCurrentField_PointStateNeighbors_AllNeighborsAreCorrect(int rowLenght, int columnLenght)
         {
+            //Precondition
+            _field = genCostumField.generateField(rowLenght, columnLenght, minesIndexs);
+            _gameProcessor = new Minesweeper.Core.GameProcessor(_field);
+
+            PointState currentPointState = PointState.Close;
+
+            //Open Cells
+            foreach(Tuple<int,int, PointState> cell in cellsToOpen)
+            {
+                _gameProcessor.Open(cell.Item2, cell.Item1);
+            }
+            _currentField = _gameProcessor.GetCurrentField();
+            
+            //Action
+            foreach (Tuple<int, int, PointState> cell in cellsToOpen)
+            {
+                var cellState = _currentField[cell.Item1, cell.Item2];
+                currentPointState = currentPointState.Previous();
+                //Assert
+                Assert.AreEqual(currentPointState, cellState, $"Correct state of cell {cell.Item2}, {cell.Item1}");
+            }
+        }
+
+        //Falta contar o numero de minas depois de ganhar e perder
+        public void GetCurrentField_NumberOfMines_AfterWinAndLose(int rowLenght, int columnLenght)
+        {
             _field = genCostumField.generateField(rowLenght, columnLenght, minesIndexs);
             _gameProcessor = new Minesweeper.Core.GameProcessor(_field);
 
@@ -100,7 +128,7 @@ namespace Tests.GameProcessor
 
             PointState currentPointState = PointState.Close;
 
-            foreach(Tuple<int,int, PointState> cell in cellsToOpen)
+            foreach (Tuple<int, int, PointState> cell in cellsToOpen)
             {
                 _gameProcessor.Open(cell.Item2, cell.Item1);
                 currentPointState = currentPointState.Previous();
@@ -108,8 +136,5 @@ namespace Tests.GameProcessor
                 Assert.AreEqual(currentPointState, cell.Item3, $"Correct state of cell {cell.Item2}, {cell.Item1}");
             }
         }
-
-        //Falta contar o numero de minas depois de ganhar e perder
-        
     }
 }
