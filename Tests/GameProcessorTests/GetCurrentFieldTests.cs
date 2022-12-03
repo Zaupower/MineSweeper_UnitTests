@@ -28,6 +28,7 @@ namespace Tests.GameProcessor
         [SetUp]
         public void SetUp()
         {
+            //Filed create to have cellsToOpen with all possible neighbors
             minesIndexs = new List<Tuple<int, int>> {
                 Tuple.Create(0,1),
                 Tuple.Create(0,2),
@@ -82,17 +83,7 @@ namespace Tests.GameProcessor
                 Tuple.Create(4,3),
                 Tuple.Create(4,4),
                 Tuple.Create(4,5),
-                Tuple.Create(5,1),
-                //Tuple.Create(5,2),
-                //Tuple.Create(5,3),
-                //Tuple.Create(5,5),
-
-                //Tuple.Create(6,0),
-                //Tuple.Create(6,1),
-                //Tuple.Create(6,2),
-                //Tuple.Create(6,3),
-                //Tuple.Create(6,4),
-                //Tuple.Create(6,5),
+                Tuple.Create(5,1)
             };
 
             cellsToLose = new List<Tuple<int, int>>
@@ -113,7 +104,6 @@ namespace Tests.GameProcessor
         {
             _field = genCostumField.generateField(rowLenght, columnLenght, minesIndexs);
             _gameProcessor = new Minesweeper.Core.GameProcessor(_field);
-            //actualGameState = _gameProcessor.Open(x, y);
 
             _currentField = _gameProcessor.GetCurrentField();
 
@@ -127,7 +117,7 @@ namespace Tests.GameProcessor
             }
         }
 
-        [Test]//Verify if all neighbors mine count
+        [Test]
         [TestCase(6, 6)]
         [TestCase(6, 7)]
         public void GetCurrentField_PointStateNeighbors_AllNeighborsAreCorrect(int rowLenght, int columnLenght)
@@ -138,7 +128,7 @@ namespace Tests.GameProcessor
 
             PointState currentPointState = PointState.Close;
 
-            //Open Cells
+                //Open Cells
             foreach (Tuple<int, int, PointState> cell in cellsToOpen)
             {
                 _gameProcessor.Open(cell.Item2, cell.Item1);
@@ -167,6 +157,7 @@ namespace Tests.GameProcessor
             _gameProcessor = new Minesweeper.Core.GameProcessor(_field);
             List<Tuple<int, int>> cellsToOpen = lose ? cellsToLose : cellsToWin;
             GameState expectedGameState = lose ? GameState.Lose : GameState.Win;
+            GameState resultGameState;
             foreach (Tuple<int, int> cell in cellsToOpen)
             {
                 try
@@ -178,24 +169,21 @@ namespace Tests.GameProcessor
                     Console.WriteLine(cell.Item2 + ", " + cell.Item1);
                 }
             }
-            GameState resultGameState = _gameProcessor.GameState;
-            //_gameProcessor.Open(2, 5);
+
             resultGameState = _gameProcessor.GameState;
             _currentField = _gameProcessor.GetCurrentField();
 
             //Action
             foreach (Tuple<int, int> cell in minesIndexs)
             {
-                var cellState = _currentField[cell.Item1, cell.Item2];
+                var resultCellState = _currentField[cell.Item1, cell.Item2];
 
                 //Assert
-                Assert.AreEqual(PointState.Mine, cellState, $"Correct state of cell {cell.Item2}, {cell.Item1}");
+                Assert.AreEqual(PointState.Mine, resultCellState, $"Correct state of cell {cell.Item2}, {cell.Item1}");
             }
 
             Assert.AreEqual(expectedGameState, resultGameState);
         }
-        //Open Cells
-
     }
 }
 
