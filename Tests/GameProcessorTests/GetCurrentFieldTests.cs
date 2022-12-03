@@ -164,7 +164,7 @@ namespace Tests.GameProcessor
                 {
                     _gameProcessor.Open(cell.Item2, cell.Item1);
 
-                }catch(InvalidOperationException)//Pevent fail by open cells affter win/lose
+                }catch(InvalidOperationException)//Prevent fail test by open cells affter win/lose
                 {
                     Console.WriteLine(cell.Item2 + ", " + cell.Item1);
                 }
